@@ -25,7 +25,7 @@ public class WorkOutCategoryController {
             return ResponseEntity.status(HttpStatus.OK).body(workOutCategoryService.getAllWorkOutCategories());
         }
 
-        @PutMapping()
+        @PostMapping("/update")
         public ResponseEntity<WorkOutCategory> updateWorkOutCategory(@RequestBody WorkOutCategory workOutCategory) {
             return ResponseEntity.status(HttpStatus.OK).body(workOutCategoryService.updateWorkOutCategory(workOutCategory));
         }
